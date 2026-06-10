@@ -1,0 +1,282 @@
+/* =============================================
+   GCTU Cloud Lab – Group 5
+   Colors pulled from site.gctu.edu.gh
+   Navy: #003366  |  Gold: #d4a017  |  Light: #f4f6f9
+   ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy:       #003366;
+  --navy-deep:  #00244d;
+  --navy-mid:   #004080;
+  --gold:       #d4a017;
+  --gold-light: #f0c040;
+  --white:      #ffffff;
+  --off-white:  #f4f6f9;
+  --text:       #1a2535;
+  --muted:      #5a6a80;
+  --border:     #dce3ed;
+  --radius:     10px;
+}
+
+/* ---- Base ---- */
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--off-white);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---- Nav ---- */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--navy-deep);
+  padding: 0 2.5rem;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--gold);
+}
+
+.nav-brand {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+nav ul li a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  transition: color 0.15s, background 0.15s;
+}
+
+nav ul li a:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  background: rgba(212, 160, 23, 0.08);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 320px;
+  height: 320px;
+  background: rgba(212, 160, 23, 0.05);
+  border-radius: 50%;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy-deep);
+  background: var(--gold);
+  padding: 5px 16px;
+  border-radius: 99px;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ---- Main layout ---- */
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ---- Sections as cards ---- */
+
+main section {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+}
+
+main section h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+
+main section p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+
+main section p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ---- Members list ---- */
+
+main section h3 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin: 1.25rem 0 0.75rem;
+}
+
+.members {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.members li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.members li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ---- Image section ---- */
+
+.project-image h2 {
+  margin-bottom: 1.25rem;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  border-radius: var(--radius);
+  border: 3px solid var(--border);
+  object-fit: cover;
+}
+
+/* ---- Footer ---- */
+
+footer {
+  background: var(--navy-deep);
+  border-top: 3px solid var(--gold);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-size: 13px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 560px) {
+  nav {
+    padding: 0 1.25rem;
+  }
+
+  .hero {
+    padding: 3.5rem 1.25rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  main section {
+    padding: 1.25rem;
+  }
+
+  .members {
+    grid-template-columns: 1fr;
+  }
+}
