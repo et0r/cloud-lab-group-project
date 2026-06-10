@@ -336,6 +336,20 @@ footer p {
 /* ---- Responsive ---- */
 
 @media (max-width: 560px) {
+  .form-group {
+    gap: 6px; /* reduce label-input spacing */
+  }
+
+  form {
+    gap: 0.75rem; /* reduce big vertical spacing between fields */
+  }
+
+  form label {
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 560px) {
   nav {
     padding: 0 1.25rem;
   }
