@@ -144,6 +144,89 @@ main {
   gap: 1.25rem;
 }
 
+/* ---- FORM STYLING ---- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Labels */
+form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.03em;
+}
+
+/* Inputs + Textarea */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--off-white);
+  color: var(--text);
+  transition: 0.2s ease;
+}
+
+/* Focus state (important UX upgrade) */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2);
+  background: var(--white);
+}
+
+/* Textarea resize control */
+form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* ---- BUTTON ---- */
+
+form button {
+  margin-top: 10px;
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Hover effect */
+form button:hover {
+  background: var(--navy-mid);
+  transform: translateY(-1px);
+}
+
+/* Active click feel */
+form button:active {
+  transform: translateY(0);
+}
+
+/* ---- OPTIONAL: small helper text ---- */
+.hint-text {
+  font-size: 12px;
+  color: var(--muted);
+}
+
 /* ---- Sections as cards ---- */
 
 main section {
