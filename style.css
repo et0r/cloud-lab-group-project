@@ -302,9 +302,9 @@ main section h3 {
 }
 
 /* ---- Image section ---- */
-
-.project-image h2 {
-  margin-bottom: 1.25rem;
+.project-image {
+  display: flex;
+  justify-content: center;
 }
 
 .project-image img {
@@ -312,6 +312,7 @@ main section h3 {
   width: 100%;
   max-width: 460px;
   height: auto;
+  margin: 0 auto;
   border-radius: var(--radius);
   border: 3px solid var(--border);
   object-fit: cover;
